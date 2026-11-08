@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="500" rx="20" fill="url(#skyGrad)" stroke="#334155" stroke-width="2"/>
+
+  <!-- Subtle Network Grid Lines -->
+  <g stroke="#334155" stroke-width="1" stroke-dasharray="4,4" opacity="0.4">
+    <line x1="100" y1="50" x2="100" y2="450" />
+    <line x1="250" y1="50" x2="250" y2="450" />
+    <line x1="400" y1="50" x2="400" y2="450" />
+    <line x1="550" y1="50" x2="550" y2="450" />
+    <line x1="700" y1="50" x2="700" y2="450" />
+    <line x1="50" y1="120" x2="750" y2="120" />
+    <line x1="50" y1="250" x2="750" y2="250" />
+    <line x1="50" y1="380" x2="750" y2="380" />
+  </g>
+
+  <!-- Central Cloud Representation -->
+  <g transform="translate(400, 190)" filter="url(#glow)">
+    <path d="M -120,40 
+             A 50,50 0 0,1 -90,-40 
+             A 70,70 0 0,1 50,-50 
+             A 60,60 0 0,1 120,20 
+             A 45,45 0 0,1 100,50 
+             L -100,50 
+             A 40,40 0 0,1 -120,40 Z" 
+          fill="url(#cloudGrad)" opacity="0.95" />
+    <!-- Cloud Icon Emblem -->
+    <text x="0" y="15" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">CLOUD PLATFORM</text>
+  </g>
+
+  <!-- Connecting Data Flow Streams -->
+  <path d="M 180,360 C 240,320 280,240 330,220" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-dasharray="6,6"/>
+  <path d="M 400,360 L 400,245" fill="none" stroke="#60a5fa" stroke-width="3" stroke-linecap="round" stroke-dasharray="6,6"/>
+  <path d="M 620,360 C 560,320 520,240 470,220" fill="none" stroke="#818cf8" stroke-width="3" stroke-linecap="round" stroke-dasharray="6,6"/>
+
+  <!-- Service Model Nodes: IaaS, PaaS, SaaS -->
+  <!-- Node 1: IaaS -->
+  <g transform="translate(110, 340)">
+    <rect width="140" height="90" rx="12" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="2" />
+    <circle cx="70" cy="28" r="16" fill="#0284c7" />
+    <text x="70" y="33" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">IaaS</text>
+    <text x="70" y="58" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Infrastructure</text>
+    <text x="70" y="74" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Servers &amp; Storage</text>
+  </g>
+
+  <!-- Node 2: PaaS -->
+  <g transform="translate(330, 340)">
+    <rect width="140" height="90" rx="12" fill="url(#cardGrad)" stroke="#60a5fa" stroke-width="2" />
+    <circle cx="70" cy="28" r="16" fill="#2563eb" />
+    <text x="70" y="33" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">PaaS</text>
+    <text x="70" y="58" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Platform</text>
+    <text x="70" y="74" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Deploy &amp; Runtime</text>
+  </g>
+
+  <!-- Node 3: SaaS -->
+  <g transform="translate(550, 340)">
+    <rect width="140" height="90" rx="12" fill="url(#cardGrad)" stroke="#818cf8" stroke-width="2" />
+    <circle cx="70" cy="28" r="16" fill="#4f46e5" />
+    <text x="70" y="33" fill="#ffffff" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">SaaS</text>
+    <text x="70" y="58" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">Software</text>
+    <text x="70" y="74" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Ready-to-use Apps</text>
+  </g>
+
+  <!-- Client Devices & Global Access Header -->
+  <g transform="translate(400, 55)">
+    <rect x="-180" y="-20" width="360" height="40" rx="20" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+    <circle cx="-150" cy="0" r="7" fill="#10b981" />
+    <text x="5" y="5" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="500" text-anchor="middle">Secure HTTPS Edge Delivery (CDN)</text>
+  </g>
+</svg>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Cloud Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="site-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+        </svg>
+        <span>Cloud</span>Lab 01
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#cloud-computing">Cloud Computing</a></li>
+          <li><a href="#cloud-services">Cloud Services</a></li>
+          <li><a href="#deployment">Deployment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="home">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-badge">HCMUTE &bull; Introduction to Cloud Computing</div>
+      <h1 class="hero-title">My First Cloud Website</h1>
+      <p class="hero-subtitle">
+        Deploying a responsive static website to the public cloud with modern edge infrastructure and automated HTTPS security.
+      </p>
+      <div class="hero-image-wrapper">
+        <img src="assets/cloud-infrastructure.svg" alt="Cloud Computing Infrastructure and Delivery Architecture">
+      </div>
+    </section>
+
+    <!-- Section 1: About Me -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="student-card">
+        <div class="info-item">
+          <span class="info-label">Full Name</span>
+          <span class="info-value">Võ Mạnh Đức Tín</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Student ID</span>
+          <span class="info-value">24110137</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Course Name</span>
+          <span class="info-value">Cloud Computing</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Assignment</span>
+          <span class="info-value">Lab 01 - Deploy Static Website</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Cloud Computing Explanation -->
+    <section id="cloud-computing" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Cloud Computing</h2>
+      </div>
+      <div class="narrative-card">
+        <p>
+          Cloud computing is a model in modern IT that delivers computing resources - such as servers, storage, databases, networking, and software - over the Internet on a pay-as-you-go pricing scheme. Instead of having to buy, setup, and run physical servers in their own data centers, companies and developers can quickly provision what they need from cloud service providers whenever necessary.
+        </p>
+        <p>
+          Based on the NIST definition, cloud computing has five key characteristics: on-demand self-service, broad network access through standard web protocols like HTTPS, resource pooling where shared infrastructure serves multiple clients, rapid elasticity to scale resources up or down according to current traffic, and measured service so customers only pay for what they actually use. This helps reduce upfront hardware investment (CapEx) and turn it into operational expenses (OpEx), making it easier to build and scale applications globally.
+        </p>
+        <div class="nist-pill-list">
+          <span class="nist-pill">On-Demand Self-Service</span>
+          <span class="nist-pill">Broad Network Access</span>
+          <span class="nist-pill">Resource Pooling</span>
+          <span class="nist-pill">Rapid Elasticity</span>
+          <span class="nist-pill">Measured Service</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Cloud Services (IaaS, PaaS, SaaS) -->
+    <section id="cloud-services" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Cloud Services</h2>
+      </div>
+      <div class="services-grid">
+        <!-- IaaS Card -->
+        <div class="service-card">
+          <span class="service-badge badge-iaas">Infrastructure</span>
+          <h3 class="service-title">IaaS - Infrastructure as a Service</h3>
+          <p class="service-desc">
+            Provides fundamental computing resources like virtual machines, storage, and networking over the internet. The cloud provider takes care of physical data centers and hardware, while the user manages operating systems, middleware, and applications.
+          </p>
+          <div class="service-example">
+            <strong>Practical Example:</strong>
+            Amazon EC2 (Elastic Compute Cloud) allows users to launch and manage virtual Linux or Windows server instances on demand.
+          </div>
+        </div>
+
+        <!-- PaaS Card -->
+        <div class="service-card">
+          <span class="service-badge badge-paas">Platform</span>
+          <h3 class="service-title">PaaS - Platform as a Service</h3>
+          <p class="service-desc">
+            Provides a ready-to-use platform for developers to deploy and manage web applications without having to handle the underlying servers, operating systems, or runtime configurations.
+          </p>
+          <div class="service-example">
+            <strong>Practical Example:</strong>
+            GitHub Pages and AWS Elastic Beanstalk automatically take care of web server hosting, SSL certificates, and application runtime.
+          </div>
+        </div>
+
+        <!-- SaaS Card -->
+        <div class="service-card">
+          <span class="service-badge badge-saas">Software</span>
+          <h3 class="service-title">SaaS - Software as a Service</h3>
+          <p class="service-desc">
+            Delivers complete software applications over the internet to end users via a web browser or app. Users do not need to install software locally or manage any infrastructure behind it.
+          </p>
+          <div class="service-example">
+            <strong>Practical Example:</strong>
+            Google Workspace (Docs, Sheets, Gmail) and Microsoft 365 offer cloud-based office applications accessible from any device.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Deployment Information -->
+    <section id="deployment" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Deployment Information</h2>
+      </div>
+      <div class="deployment-card">
+        <p style="color: var(--text-muted); margin-bottom: 1rem;">
+          This static website is deployed to the public cloud using Option B specified in the Lab 01 assignment.
+        </p>
+        <table class="deployment-table">
+          <tbody>
+            <tr>
+              <th>Hosting Platform</th>
+              <td><strong>GitHub Pages (Option B)</strong></td>
+            </tr>
+            <tr>
+              <th>Architecture Type</th>
+              <td>Static Website Hosting on Global Edge CDN</td>
+            </tr>
+            <tr>
+              <th>Source Repository</th>
+              <td>
+                <a href="https://github.com/Bevil0301/cloud-lab1" class="url-link" target="_blank" rel="noopener noreferrer">
+                  https://github.com/Bevil0301/cloud-lab1
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th>Deployment Branch</th>
+              <td><code>main</code> branch &bull; <code>/ (root)</code> directory</td>
+            </tr>
+            <tr>
+              <th>Security Protocol</th>
+              <td>
+                <span class="status-badge">Active HTTPS &bull; TLS Encrypted</span>
+              </td>
+            </tr>
+            <tr>
+              <th>Public Website URL</th>
+              <td>
+                <a href="https://bevil0301.github.io/cloud-lab1/" class="url-link" target="_blank" rel="noopener noreferrer">
+                  https://bevil0301.github.io/cloud-lab1/
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <th>Verification Status</th>
+              <td>Accessible publicly without authentication across desktop &amp; mobile clients</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      &copy; 2026 <strong>Võ Mạnh Đức Tín</strong> (MSSV: 24110137) &bull; Introduction to Cloud Computing &bull; Lab 01
+    </p>
+  </footer>
+
+</body>
+</html>
